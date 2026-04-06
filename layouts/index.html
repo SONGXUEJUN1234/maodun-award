@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<div class="container">
+    <div class="card-grid">
+        {{ range $award := .Site.Data.awards.awards }}
+            {{ range $award.works }}
+                {{ partial "card.html" . }}
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

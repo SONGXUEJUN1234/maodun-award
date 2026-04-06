@@ -1,0 +1,10 @@
+<a href="/work/{{ .slug }}" class="card">
+    <div class="card-cover">
+        {{ substr .title 0 1 }}
+    </div>
+    <div class="card-content">
+        <h3 class="card-title">{{ .title }}</h3>
+        <p class="card-author">{{ .author }}</p>
+        <p class="card-year">{{ .year_published }}</p>
+    </div>
+</a>

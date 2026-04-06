@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+
+<a href="/" class="back-link">← 返回首页</a>
+
+<div class="detail-page">
+    <div class="detail-content">
+        <header class="detail-header">
+            <h1>{{ .Title }}</h1>
+            <p class="detail-author">{{ .Params.author }}</p>
+        </header>
+
+        <div class="detail-body">
+            {{ with .Params.author_bio }}
+            <section class="detail-section">
+                <h2>作者简介</h2>
+                <p>{{ . }}</p>
+            </section>
+            {{ end }}
+
+            {{ with .Params.publisher }}
+            <section class="detail-section">
+                <h2>出版信息</h2>
+                <p>{{ . }}{{ with $.Params.year_published }} ({{ . }}){{ end }}</p>
+            </section>
+            {{ end }}
+
+            {{ with .Params.description }}
+            <section class="detail-section">
+                <h2>作品简介</h2>
+                <p>{{ . }}</p>
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
