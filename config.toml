@@ -1,7 +1,6 @@
-baseURL = "https://[username].github.io/maodun-award/"
+baseURL = "https://songxuejun1234.github.io/maodun-award/"
 languageCode = "zh-cn"
 title = "茅盾文学奖"
-theme = ""
 
 [params]
   description = "历年茅盾文学奖获奖作品与作家介绍"
